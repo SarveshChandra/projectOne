@@ -26,9 +26,9 @@
     <br>
     <span ng-show="((myRegisterForm.contactcode.$invalid || myRegisterForm.contactnumber.$invalid) && (myRegisterForm.contactcode.$touched || myRegisterForm.contactnumber.$touched))"><font color=red>Invalid contact no.</font></span>
     <br>
-    <input type="number" name="contactcode" style="width: 60px" placeholder="+code" ng-model="contactcode" ng-maxlength="4" ng-required="contactnumber" />
+    <input type="number" name="contactcode" style="width: 60px" placeholder="+code" ng-model="contactcode" ng-maxlength="4" />
     &nbsp;
-    <input type="number" name="contactnumber" ng-model="contactnumber" ng-maxlength="10" />
+    <input type="number" name="contactnumber" ng-model="contactnumber" ng-maxlength="10" ng-required="contactcode" />
     <br>
     <br>
     Email Address
