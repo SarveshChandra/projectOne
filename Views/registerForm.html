@@ -5,21 +5,21 @@
     <br>
     <span ng-show="myRegisterForm.fname.$invalid && myRegisterForm.fname.$touched"><font color=red>Please fill in your first name.</font></span>
     <br>
-    <input type="text" name="fname" ng-model="fname" ng-required="" />
+    <input type="text" name="fname" ng-model="fname" ng-required="true" />
     <br>
     <br>
     Last Name
     <br>
     <span ng-show="myRegisterForm.lname.$invalid && myRegisterForm.lname.$touched"><font color=red>Please fill in your last name.</font></span>
     <br>
-    <input type="text" name="lname" ng-model="lname" required />
+    <input type="text" name="lname" ng-model="lname" ng-required="true" />
     <br>
     <br>
     Password
     <br>
     <span ng-show="myRegisterForm.password.$invalid && myRegisterForm.password.$touched"><font color=red>Password must be 8 characters or more.</font></span>
     <br>
-    <input type="password" name="password" ng-model="password" ng-minlength="8" required />
+    <input type="password" name="password" ng-model="password" ng-minlength="8" ng-required="true" />
     <br>
     <br>
     Phone/Mobile no.
@@ -35,7 +35,7 @@
     <br>
     <span ng-show="myRegisterForm.email.$invalid && myRegisterForm.email.$touched"><font color=red>Invalid email address.</font></span>
     <br>
-    <input type="email" name="email" ng-model="email" required />
+    <input type="email" name="email" ng-model="email" ng-required="true" />
     <br>
     <br>
     <button type="submit" name="submit">Sign Up</button>
