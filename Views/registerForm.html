@@ -1,0 +1,43 @@
+<h2>Register</h2>
+<form  name="myRegisterForm" ng-submit="myRegisterForm.$valid && submit()" novalidate>
+
+    First Name
+    <br>
+    <span ng-show="myRegisterForm.fname.$invalid && myRegisterForm.fname.$touched"><font color=red>Please fill in your first name.</font></span>
+    <br>
+    <input type="text" name="fname" ng-model="fname" required />
+    <br>
+    <br>
+    Last Name
+    <br>
+    <span ng-show="myRegisterForm.lname.$invalid && myRegisterForm.lname.$touched"><font color=red>Please fill in your last name.</font></span>
+    <br>
+    <input type="text" name="lname" ng-model="lname" required />
+    <br>
+    <br>
+    Password
+    <br>
+    <span ng-show="myRegisterForm.password.$invalid && myRegisterForm.password.$touched"><font color=red>Password must be 8 characters or more.</font></span>
+    <br>
+    <input type="password" name="password" ng-model="password" ng-minlength="8" required />
+    <br>
+    <br>
+    Phone/Mobile no.
+    <br>
+    <span ng-show="((myRegisterForm.contactcode.$invalid || myRegisterForm.contactnumber.$invalid) && (myRegisterForm.contactcode.$touched || myRegisterForm.contactnumber.$touched))"><font color=red>Invalid contact no.</font></span>
+    <br>
+    <input type="number" name="contactcode" style="width: 60px" placeholder="+code" ng-model="contactcode" ng-maxlength="4" required />
+    &nbsp;
+    <input type="number" name="contactnumber" ng-model="contactnumber" ng-maxlength="10" ng-required="true" required />
+    <br>
+    <br>
+    Email Address
+    <br>
+    <span ng-show="myRegisterForm.email.$invalid && myRegisterForm.email.$touched"><font color=red>Invalid email address.</font></span>
+    <br>
+    <input type="email" name="email" ng-model="email" required />
+    <br>
+    <br>
+    <button type="submit" name="submit">Sign Up</button>
+
+</form>

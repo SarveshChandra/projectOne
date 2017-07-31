@@ -1,0 +1,20 @@
+<h2>Login</h2>
+<form  name="myLoginForm" ng-submit="myLoginForm.$valid && submit()" novalidate>
+    
+    Email Address
+    <br>
+    <span ng-show="myLoginForm.$submitted && myLoginForm.input1.$invalid && myLoginForm.input2.$untouched"><font color=red>Incorrect email address!</font></span>
+    <br>
+    <input  type="email" name="input1" ng-model="input1" required />
+    <br>
+    <br>
+    Password
+    <br> 
+    <span ng-show="myLoginForm.$submitted && myLoginForm.input2.$invalid && myLoginForm.input2.$untouched"><font color=red>Password not valid!</font></span>
+    <br>
+    <input type="password" name="input2" ng-model="input2"  ng-minlength="8" required />
+    <br>
+    <br>
+    <button type="submit" name="submit">Login</button>
+    
+</form>
