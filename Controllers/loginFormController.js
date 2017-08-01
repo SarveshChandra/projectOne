@@ -18,7 +18,7 @@
             }
 
             else {
-                alert('Incorrect email address or password! Try again.');
+                //alert('Incorrect email address or password! Try again.');
                 $scope.input1="";
                 $scope.input2="";
             }
