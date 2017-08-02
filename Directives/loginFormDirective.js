@@ -7,7 +7,7 @@
             return {
                 restrict: 'E',
                 templateUrl: 'Views/loginForm.html',
-                controller: 'loginFormController',
+                controller: 'loginFormController'
             };
     });
 
