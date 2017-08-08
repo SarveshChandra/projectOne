@@ -3,28 +3,28 @@
 
     First Name
     <br>
-    <span ng-show="myRegisterForm.fname.$invalid && myRegisterForm.fname.$touched"><font color=red>Please fill in your first name.</font></span>
+    <span ng-show="myRegisterForm.fname.$invalid && (myRegisterForm.fname.$touched || myRegisterForm.$submitted)"><font color=red>Please fill in your first name.</font></span>
     <br>
     <input type="text" name="fname" ng-model="fname" ng-required="true" />
     <br>
     <br>
     Last Name
     <br>
-    <span ng-show="myRegisterForm.lname.$invalid && myRegisterForm.lname.$touched"><font color=red>Please fill in your last name.</font></span>
+    <span ng-show="myRegisterForm.lname.$invalid && (myRegisterForm.lname.$touched || myRegisterForm.$submitted)"><font color=red>Please fill in your last name.</font></span>
     <br>
     <input type="text" name="lname" ng-model="lname" ng-required="true" />
     <br>
     <br>
     Password
     <br>
-    <span ng-show="myRegisterForm.password.$invalid && myRegisterForm.password.$touched"><font color=red>Password must be 8 characters or more.</font></span>
+    <span ng-show="myRegisterForm.password.$invalid && (myRegisterForm.password.$touched || myRegisterForm.$submitted)"><font color=red>Password must be 8 characters or more.</font></span>
     <br>
     <input type="password" name="password" ng-model="password" ng-minlength="8" ng-required="true" />
     <br>
     <br>
     Phone/Mobile no.
     <br>
-    <span ng-show="((myRegisterForm.contactcode.$invalid || myRegisterForm.contactnumber.$invalid) && (myRegisterForm.contactcode.$touched || myRegisterForm.contactnumber.$touched))"><font color=red>Invalid contact no.</font></span>
+    <span ng-show="(myRegisterForm.contactcode.$invalid || myRegisterForm.contactnumber.$invalid) && (myRegisterForm.contactcode.$touched || myRegisterForm.contactnumber.$touched || myRegisterForm.$submitted)"><font color=red>Invalid contact no.</font></span>
     <br>
     <input type="number" name="contactcode" style="width: 60px" placeholder="+code" ng-model="contactcode" ng-maxlength="4" />
     &nbsp;
@@ -33,7 +33,7 @@
     <br>
     Email Address
     <br>
-    <span ng-show="myRegisterForm.email.$invalid && myRegisterForm.email.$touched"><font color=red>Invalid email address.</font></span>
+    <span ng-show="myRegisterForm.email.$invalid && (myRegisterForm.email.$touched || myRegisterForm.$submitted)"><font color=red>Invalid email address.</font></span>
     <br>
     <input type="email" name="email" ng-model="email" ng-required="true" />
     <br>
